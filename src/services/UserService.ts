@@ -31,4 +31,10 @@ export class UserService {
         return user;
 
     }
+
+    async findByEmail(email: string) {
+        const user = await this.usersRepository.findOne({ email });
+
+        return user;
+    }
 }
